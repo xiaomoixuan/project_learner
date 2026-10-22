@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0",
+  "phase": "question",
+  "case_id": "",
+  "lens": "",
+  "auditor_id": "",
+  "input_sha256": "",
+  "draft_sha256": null,
+  "previous_questions": null,
+  "questions": [
+    {
+      "id": "",
+      "chain_id": "",
+      "parent_id": null,
+      "question": "",
+      "basis": [{"source": "", "source_id": null, "locator": "", "reason": ""}],
+      "scope": {"type": "in_scope", "reason": ""},
+      "origin": {"type": "blind_question", "discovered_from": null, "authored_by": null}
+    }
+  ]
+}
