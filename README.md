@@ -29,10 +29,15 @@ cp -R project_learner/skills/project-interview-dossier ~/.codex/skills/
 5. 验证、迭代与交付
 6. 项目复盘与学习巩固
 
-每个板块可包含多个项目专属章节。默认先完成作者自查；用户要求独立审查，或主要工作的操作、判断、交接仍存在具体缺口时，按需启用内部 interview 模块。教学补建内容会集中说明，不代表经核实的企业内部记录。
+每个板块可包含多个项目专属章节。先让读者看懂项目形态、用户任务与具体成果，再解释运行机制、个人工作与取舍；代码、公式和记录用于解释相应判断，不要求每章都做操作复现。
+
+启动时会提供一次可跳过的输入步骤：可以粘贴 JD，没有也可用自然语言描述岗位或求职方向；已有 JD 或明确跳过时不重复询问。
+
+默认先完成作者自查；用户要求独立审查，或主要工作的操作、判断、交接仍存在具体缺口时，按需启用内部 interview 模块。教学补建内容会集中说明，不代表经核实的企业内部记录。
 
 ## 文件
 
+- [验证范围与结论](VALIDATION.md)
 - [主 Skill](skills/project-interview-dossier/SKILL.md)
 - [教材结构](skills/project-interview-dossier/references/document-guide.md)
 - [教学方法](skills/project-interview-dossier/references/teaching-method.md)
