@@ -1,4 +1,4 @@
 interface:
   display_name: "完整项目学习手册"
-  short_description: "按六个学习板块补齐项目，用具体材料教会处理、判断和交付"
-  default_prompt: "使用 $project-interview-dossier，根据我的简历与可选JD补建完整项目，按六个学习板块写成自然连贯、从浅到深的教材，用具体材料教会我的处理、判断与交付，各章按实际工作安排，完成自查并按需独立检查。"
+  short_description: "从用户使用到系统设计和个人工作，循序学懂完整项目并准备面试"
+  default_prompt: "使用 $project-interview-dossier，根据我的简历与可选JD，把项目从用户使用、功能实现讲到系统设计、个人工作与结果，按六个板块写成自然连贯、从浅到深的学习手册，完成自查并按需独立检查。"

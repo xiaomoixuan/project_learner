@@ -280,7 +280,7 @@ def check_ledgers(path, document, versions, errors):
     return previous_rows
 
 
-def check(input_path, draft_path, question_paths, ledger_paths, allow_incomplete=False):
+def check(input_path, draft_path, question_paths, ledger_paths, allow_incomplete=False, single_auditor=False):
     errors, counts = [], Counter()
     input_hash, draft_hash = sha(input_path.read_bytes()), body_sha(draft_path)
     questions, ledgers = {}, {}
@@ -295,7 +295,10 @@ def check(input_path, draft_path, question_paths, ledger_paths, allow_incomplete
                 errors.append(f'{label}: missing/duplicate lens {lens!r}')
                 continue
             target[lens] = (path, item)
-    if not {'A', 'B', 'C'} <= set(questions):
+    if single_auditor:
+        if set(questions) != {'S'}:
+            errors.append('Single-auditor mode requires exactly question lens S')
+    elif not {'A', 'B', 'C'} <= set(questions):
         errors.append('Missing required question lenses A/B/C')
     if set(questions) != set(ledgers):
         errors.append('Question and ledger lenses differ')
@@ -350,9 +353,10 @@ if __name__ == '__main__':
     parser.add_argument('--questions', type=Path, nargs='+', required=True)
     parser.add_argument('--ledgers', type=Path, nargs='+', required=True)
     parser.add_argument('--allow-incomplete', action='store_true', help='Check interim records without requiring all answers to pass')
+    parser.add_argument('--single-auditor', action='store_true', help='Explicit single-instance S mode; does not claim three independent reviewers')
     args = parser.parse_args()
     try:
-        result = check(args.input, args.draft, args.questions, args.ledgers, args.allow_incomplete)
+        result = check(args.input, args.draft, args.questions, args.ledgers, args.allow_incomplete, args.single_auditor)
     except (OSError, ValueError, TypeError, KeyError, AttributeError) as exc:
         result = {'errors': [f'Invalid record: {exc}']}
     print(json.dumps(result, ensure_ascii=False, indent=2))
