@@ -1,4 +1,4 @@
 interface:
   display_name: "完整项目学习手册"
-  short_description: "按六个学习板块补齐项目，用具体材料教会处理、判断和交付"
+  short_description: "按六个学习板块讲透项目，支持逐轮面试模拟、针对回答追问和复盘"
   default_prompt: "使用 $project-interview-dossier，根据我的简历与可选JD补建完整项目，按六个学习板块写成自然连贯、从浅到深的教材，用具体材料教会我的处理、判断与交付，各章按实际工作安排，完成自查并按需独立检查。"
