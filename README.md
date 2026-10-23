@@ -35,6 +35,10 @@ cp -R project_learner/skills/project-interview-dossier ~/.codex/skills/
 
 默认先完成作者自查；用户要求独立审查，或主要功能、设计和个人工作仍讲不清时，按需启用内部 interview 模块。通常使用三个独立视角，用户明确要求节省时间时可用一个新实例合并审查，并保留实际模式和复验记录。维护迭代另用全新读者顺序学习全文，评价深度、可理解性、语言、岗位适配与连贯性。教学补建内容会集中说明，不代表经核实的企业内部记录。
 
+## 示例
+
+[CodeRelay 完整示例](examples/coderelay/README.md)包含脱敏项目输入、实际岗位职责、完整学习手册、28 道实际 interview 问题与教材复答，以及独立读者和前后比较结论。
+
 ## 文件
 
 - [验证范围与结论](VALIDATION.md)
@@ -44,4 +48,4 @@ cp -R project_learner/skills/project-interview-dossier ~/.codex/skills/
 - [深度标准](skills/project-interview-dossier/references/depth-standard.md)
 - [内部 interview](skills/project-interview-dossier/internal/interview-auditor/SKILL.md)
 
-仓库包含 Skill、配套参考资料、模板、检查脚本和通用回归测试，不包含真实简历、生成教材或私人记录。内部 interview 模块的改编来源见其 [来源说明](skills/project-interview-dossier/internal/interview-auditor/references/sources.md) 与 [许可证](skills/project-interview-dossier/internal/interview-auditor/LICENSE)。
+仓库包含 Skill、配套参考资料、模板、检查脚本、通用回归测试及脱敏教学示例，不包含原始完整简历或私人实验记录。内部 interview 模块的改编来源见其 [来源说明](skills/project-interview-dossier/internal/interview-auditor/references/sources.md) 与 [许可证](skills/project-interview-dossier/internal/interview-auditor/LICENSE)。
